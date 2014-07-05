@@ -17,12 +17,11 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "browserify": "^4.1.8",
-    "coffeeify": "^0.6.0",
-    "grunt-browserify": "^2.1.0",
-    "sanitize-caja": "*"
   },
   "devDependencies": {
+    "sanitize-caja": "*",
+    "coffeeify": "^0.6.0",
+    "grunt-browserify": "^2.1.0",
     "grunt": "~0.4",
     "grunt-contrib-coffee": "~0.10",
     "grunt-contrib-watch": "~0.6"
