@@ -1,7 +1,7 @@
 sanitize = require 'sanitize-caja'
 
 emit = ($item, item) ->
-	$item.append sanitize item.text
+	$item.append "<p>#{sanitize item.text}</p>"
 
 bind = ($item, item) ->
 	$item.dblclick -> wiki.textEditor $item, item

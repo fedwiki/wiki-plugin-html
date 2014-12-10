@@ -20,7 +20,7 @@ module.exports = function (grunt) {
     
     watch: {
       all: {
-        files: ['*.coffee'],
+        files: ['client/*.coffee'],
         tasks: ['browserify']
       }
     }
