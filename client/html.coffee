@@ -1,8 +1,8 @@
 sanitize = require 'sanitize-caja'
 
 emit = ($item, item) ->
-	linksResolved = wiki.resolveLinks(item.text)
-	$item.append "<p>#{sanitize linksResolved}</p>"
+	sanitizedItem = sanitize item.text
+	$item.append "<p>#{wiki.resolveLinks(sanitizedItem)}</p>"
 
 bind = ($item, item) ->
 	$item.dblclick -> wiki.textEditor $item, item
