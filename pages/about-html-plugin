@@ -22,19 +22,19 @@
       "text": "<h3> Formatting"
     },
     {
-      "type": "paragraph",
+      "type": "html",
       "id": "35e6304e6d3c74e4",
-      "text": "Use b for bold."
+      "text": "Use &lt;b>...&lt;/b> for <b>bold</b>."
     },
     {
-      "type": "paragraph",
+      "type": "html",
       "id": "ffea984f189ed538",
-      "text": "Use i for italic."
+      "text": "Use &lt;i>...&lt;/i> for <i>italic</i>."
     },
     {
-      "type": "paragraph",
+      "type": "html",
       "id": "a15eb154dbd1c13d",
-      "text": "Use h3 for headings. By convention we use size 3."
+      "text": "Use &lt;h3>...&lt;/h3> for headings. By convention we use size 3."
     }
   ],
   "journal": [
@@ -253,6 +253,127 @@
         "text": "This markup uses tags enclosed in angle brackets to enclose text to be formatted. The matching end tag includes a forward slash. A few tags don't expect to be matched with end tags."
       },
       "date": 1402293581706
+    },
+    {
+      "type": "edit",
+      "id": "35e6304e6d3c74e4",
+      "item": {
+        "type": "paragraph",
+        "id": "35e6304e6d3c74e4",
+        "text": "Use b for <b>bold</b>."
+      },
+      "date": 1418315262794
+    },
+    {
+      "type": "edit",
+      "id": "35e6304e6d3c74e4",
+      "item": {
+        "type": "html",
+        "id": "35e6304e6d3c74e4",
+        "text": "Use b for <b>bold</b>."
+      },
+      "date": 1418315264532
+    },
+    {
+      "type": "edit",
+      "id": "35e6304e6d3c74e4",
+      "item": {
+        "type": "html",
+        "id": "35e6304e6d3c74e4",
+        "text": "Use b for <b>bold</b>."
+      },
+      "date": 1418315264534
+    },
+    {
+      "type": "edit",
+      "id": "35e6304e6d3c74e4",
+      "item": {
+        "type": "html",
+        "id": "35e6304e6d3c74e4",
+        "text": "Use &lt;b>...&lt;/b> for <b>bold</b>."
+      },
+      "date": 1418315291977
+    },
+    {
+      "type": "edit",
+      "id": "ffea984f189ed538",
+      "item": {
+        "type": "paragraph",
+        "id": "ffea984f189ed538",
+        "text": "Use i for <i>italic</i>."
+      },
+      "date": 1418315326040
+    },
+    {
+      "type": "edit",
+      "id": "ffea984f189ed538",
+      "item": {
+        "type": "html",
+        "id": "ffea984f189ed538",
+        "text": "Use i for <i>italic</i>."
+      },
+      "date": 1418315327586
+    },
+    {
+      "type": "edit",
+      "id": "ffea984f189ed538",
+      "item": {
+        "type": "html",
+        "id": "ffea984f189ed538",
+        "text": "Use i for <i>italic</i>."
+      },
+      "date": 1418315327589
+    },
+    {
+      "type": "edit",
+      "id": "ffea984f189ed538",
+      "item": {
+        "type": "html",
+        "id": "ffea984f189ed538",
+        "text": "Use &lt;i>...&lt;/i> for <i>italic</i>."
+      },
+      "date": 1418315351732
+    },
+    {
+      "type": "edit",
+      "id": "a15eb154dbd1c13d",
+      "item": {
+        "type": "paragraph",
+        "id": "a15eb154dbd1c13d",
+        "text": "Use &lt;h3> for headings. By convention we use size 3."
+      },
+      "date": 1418315376535
+    },
+    {
+      "type": "edit",
+      "id": "a15eb154dbd1c13d",
+      "item": {
+        "type": "html",
+        "id": "a15eb154dbd1c13d",
+        "text": "Use &lt;h3> for headings. By convention we use size 3."
+      },
+      "date": 1418315383641
+    },
+    {
+      "type": "edit",
+      "id": "a15eb154dbd1c13d",
+      "item": {
+        "type": "html",
+        "id": "a15eb154dbd1c13d",
+        "text": "Use &lt;h3> for headings. By convention we use size 3."
+      },
+      "date": 1418315383644
+    },
+    {
+      "type": "edit",
+      "id": "a15eb154dbd1c13d",
+      "item": {
+        "type": "html",
+        "id": "a15eb154dbd1c13d",
+        "text": "Use &lt;h3>...&lt;/h3> for headings. By convention we use size 3."
+      },
+      "date": 1418315409686
     }
-  ]
+  ],
+  "plugin": "html"
 }
