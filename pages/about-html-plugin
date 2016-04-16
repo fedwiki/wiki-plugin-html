@@ -19,7 +19,7 @@
     {
       "type": "html",
       "id": "d5ef9127d6b9c538",
-      "text": "<h3> Formatting"
+      "text": "<h3> Formatting </h3>"
     },
     {
       "type": "html",
@@ -35,6 +35,31 @@
       "type": "html",
       "id": "a15eb154dbd1c13d",
       "text": "Use &lt;h3>...&lt;/h3> for headings. By convention we use size 3."
+    },
+    {
+      "type": "html",
+      "id": "dc5098757cfc4c3e",
+      "text": "<h3> Forms </h3>"
+    },
+    {
+      "type": "paragraph",
+      "id": "8a1c7ced09e2415c",
+      "text": "Use <form ...> ... <input type=submit ...></form> for posts to remote services. Services are expected to respond with json for a page to be added to the lineup."
+    },
+    {
+      "type": "paragraph",
+      "id": "555a2d4d5f96b0b9",
+      "text": "For example, this form submits an image url to a remote service as if the image had been dropped on an image transporter. See [[About Transport Plugin]]"
+    },
+    {
+      "type": "html",
+      "id": "f80adaee5751ad1e",
+      "text": "<form \n  method=post\n  action=\"http://fed.wiki.org:4010/image\"\n  style=\"background-color:#eee; padding:15px;\">\n<center>\nTransport Image to Wiki Page<br><br>\nurl:\n<input\n  name=text\n  size=40\n  value=\"http://c2.com/wiki/wiki-21st.jpg\">\n<input\n  name=html\n  type=hidden\n  value=\"\">\n<input\n  type=submit\n  value=submit>\n</center>\n</form>"
+    },
+    {
+      "type": "paragraph",
+      "id": "4319e863cb1ceb36",
+      "text": "Note: fidelity with the Transport plugin api is not required of form handlers."
     }
   ],
   "journal": [
@@ -373,6 +398,128 @@
         "text": "Use &lt;h3>...&lt;/h3> for headings. By convention we use size 3."
       },
       "date": 1418315409686
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "dc5098757cfc4c3e"
+      },
+      "id": "dc5098757cfc4c3e",
+      "type": "add",
+      "after": "a15eb154dbd1c13d",
+      "date": 1460846233633
+    },
+    {
+      "type": "edit",
+      "id": "dc5098757cfc4c3e",
+      "item": {
+        "type": "html",
+        "id": "dc5098757cfc4c3e",
+        "text": "<h3> Forms </h3>"
+      },
+      "date": 1460846331503
+    },
+    {
+      "type": "edit",
+      "id": "d5ef9127d6b9c538",
+      "item": {
+        "type": "html",
+        "id": "d5ef9127d6b9c538",
+        "text": "<h3> Formatting </h3>"
+      },
+      "date": 1460846339916
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "8a1c7ced09e2415c"
+      },
+      "id": "8a1c7ced09e2415c",
+      "type": "add",
+      "after": "dc5098757cfc4c3e",
+      "date": 1460846350891
+    },
+    {
+      "type": "edit",
+      "id": "8a1c7ced09e2415c",
+      "item": {
+        "type": "paragraph",
+        "id": "8a1c7ced09e2415c",
+        "text": "Use <form ...> ... <input type=submit ...></form> for posts to remote services. Services are expected to respond with json for a page to be added to the lineup."
+      },
+      "date": 1460846670535
+    },
+    {
+      "type": "add",
+      "id": "555a2d4d5f96b0b9",
+      "item": {
+        "type": "paragraph",
+        "id": "555a2d4d5f96b0b9",
+        "text": "For example, this form submits an image url as if it had been dropped on an image transporter. See [[About Transport Plugin]]"
+      },
+      "after": "8a1c7ced09e2415c",
+      "date": 1460846746994
+    },
+    {
+      "type": "edit",
+      "id": "555a2d4d5f96b0b9",
+      "item": {
+        "type": "paragraph",
+        "id": "555a2d4d5f96b0b9",
+        "text": "For example, this form submits an image url to a remote service as if the image had been dropped on an image transporter. See [[About Transport Plugin]]"
+      },
+      "date": 1460846816635
+    },
+    {
+      "type": "add",
+      "item": {
+        "type": "html",
+        "id": "f80adaee5751ad1e",
+        "text": "<form \n  method=post\n  action=\"http://fed.wiki.org:4010/image\"\n  style=\"background-color:#eee; padding:15px;\">\n<center>\nTransport Image to Wiki Page<br><br>\nurl:\n<input\n  name=text\n  size=40\n  value=\"http://c2.com/wiki/wiki-21st.jpg\">\n<input\n  name=html\n  type=hidden\n  value=\"\">\n<input\n  type=submit\n  value=submit>\n</center>\n</form>"
+      },
+      "after": "8a1c7ced09e2415c",
+      "id": "f80adaee5751ad1e",
+      "date": 1460846863200
+    },
+    {
+      "type": "add",
+      "item": {
+        "type": "paragraph",
+        "id": "4319e863cb1ceb36",
+        "text": "Here we try to duplicate the image transporter, although api fidelity with the Transport plugin is not required of form handlers."
+      },
+      "after": "f80adaee5751ad1e",
+      "id": "4319e863cb1ceb36",
+      "date": 1460846876988
+    },
+    {
+      "type": "move",
+      "order": [
+        "9c194f37e9fc5d1b",
+        "915537d97da73c42",
+        "cbb00b60e997d4b3",
+        "d5ef9127d6b9c538",
+        "35e6304e6d3c74e4",
+        "ffea984f189ed538",
+        "a15eb154dbd1c13d",
+        "dc5098757cfc4c3e",
+        "8a1c7ced09e2415c",
+        "555a2d4d5f96b0b9",
+        "f80adaee5751ad1e",
+        "4319e863cb1ceb36"
+      ],
+      "id": "555a2d4d5f96b0b9",
+      "date": 1460846888582
+    },
+    {
+      "type": "edit",
+      "id": "4319e863cb1ceb36",
+      "item": {
+        "type": "paragraph",
+        "id": "4319e863cb1ceb36",
+        "text": "Note: fidelity with the Transport plugin api is not required of form handlers."
+      },
+      "date": 1460846975355
     }
   ],
   "plugin": "html"
