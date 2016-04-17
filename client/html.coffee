@@ -26,9 +26,9 @@ bind = ($item, item) ->
       data: JSON.stringify(params)
 
     $.ajax(req).done (page) ->
-      $item.find('.caption').text 'done'
+      $page = $(e.target).parents('.page')
       resultPage = wiki.newPage(page)
-      wiki.showResult resultPage
+      wiki.showResult resultPage, {$page}
 
 
 window.plugins.html = {emit, bind} if window?
