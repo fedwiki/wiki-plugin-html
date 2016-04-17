@@ -1,3 +1,10 @@
+###
+ * Federated Wiki : HTML Plugin
+ *
+ * Licensed under the MIT license.
+ * https://github.com/fedwiki/wiki-plugin-html/blob/master/LICENSE.txt
+###
+
 sanitize = require 'sanitize-caja'
 
 emit = ($item, item) ->
