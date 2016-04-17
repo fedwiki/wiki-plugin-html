@@ -54,7 +54,7 @@
     {
       "type": "html",
       "id": "f80adaee5751ad1e",
-      "text": "<form \n  method=post\n  action=\"http://fed.wiki.org:4010/image\"\n  style=\"background-color:#eee; padding:15px;\">\n<center>\nTransport Image to Wiki Page<br><br>\nurl:\n<input\n  name=text\n  size=40\n  value=\"http://c2.com/wiki/wiki-21st.jpg\">\n<input\n  name=html\n  type=hidden\n  value=\"\">\n<input\n  type=submit\n  value=submit>\n</center>\n</form>"
+      "text": "<form \n  action=\"http://fed.wiki.org:4010/image\"\n  style=\"background-color:#eee; padding:15px;\">\n<center>\nTransport Image to Wiki Page<br><br>\nurl:\n<input\n  name=text\n  size=40\n  value=\"http://c2.com/wiki/wiki-21st.jpg\">\n<input\n  name=html\n  type=hidden\n  value=\"\">\n<input\n  type=submit\n  value=submit>\n</center>\n</form>"
     },
     {
       "type": "paragraph",
@@ -520,6 +520,16 @@
         "text": "Note: fidelity with the Transport plugin api is not required of form handlers."
       },
       "date": 1460846975355
+    },
+    {
+      "type": "edit",
+      "id": "f80adaee5751ad1e",
+      "item": {
+        "type": "html",
+        "id": "f80adaee5751ad1e",
+        "text": "<form \n  action=\"http://fed.wiki.org:4010/image\"\n  style=\"background-color:#eee; padding:15px;\">\n<center>\nTransport Image to Wiki Page<br><br>\nurl:\n<input\n  name=text\n  size=40\n  value=\"http://c2.com/wiki/wiki-21st.jpg\">\n<input\n  name=html\n  type=hidden\n  value=\"\">\n<input\n  type=submit\n  value=submit>\n</center>\n</form>"
+      },
+      "date": 1460861990632
     }
   ],
   "plugin": "html"
