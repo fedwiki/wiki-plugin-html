@@ -54,12 +54,28 @@
     {
       "type": "html",
       "id": "f80adaee5751ad1e",
-      "text": "<form \n  action=\"http://fed.wiki.org:4010/image\"\n  style=\"background-color:#eee; padding:15px;\">\n<center>\nTransport Image to Wiki Page<br><br>\nurl:\n<input\n  name=text\n  size=40\n  value=\"http://c2.com/wiki/wiki-21st.jpg\">\n<input\n  name=html\n  type=hidden\n  value=\"\">\n<input\n  type=submit\n  value=submit>\n</center>\n</form>"
+      "text": "<form \n  action=\"http://home.c2.com:4010/image\"\n  style=\"background-color:#eee; padding:15px;\">\n<center>\nTransport Image to Wiki Page<br><br>\nurl:\n<input\n  name=text\n  size=40\n  value=\"http://c2.com/wiki/wiki-21st.jpg\">\n<input\n  name=html\n  type=hidden\n  value=\"\">\n<input\n  type=submit\n  value=submit>\n</center>\n</form>"
     },
     {
       "type": "paragraph",
       "id": "4319e863cb1ceb36",
       "text": "Note: fidelity with the Transport plugin api is not required of form handlers."
+    },
+    {
+      "type": "paragraph",
+      "id": "10e1986149bf11a7",
+      "text": "We special case one action url and handle it within the plugin without transporting through a remote service."
+    },
+    {
+      "type": "code",
+      "id": "3230e0f921be8fe1",
+      "text": "<form action = \"http://new_page/\">"
+    },
+    {
+      "type": "html",
+      "id": "b20c4680762fa185",
+      "text": "<form \n  action=\"http://new_page/\"\n  style=\"background-color:#eee; padding:15px;\">\n<center>\nCreate New Page<br><br>\n<input\n  name=title\n  size=40\n  placeholder=\"New Page Title\">\n<input\n  type=submit\n  value=create>\n</center>\n</form>",
+      "alias": "f80adaee5751ad1e"
     }
   ],
   "journal": [
@@ -475,7 +491,7 @@
       "item": {
         "type": "html",
         "id": "f80adaee5751ad1e",
-        "text": "<form \n  method=post\n  action=\"http://fed.wiki.org:4010/image\"\n  style=\"background-color:#eee; padding:15px;\">\n<center>\nTransport Image to Wiki Page<br><br>\nurl:\n<input\n  name=text\n  size=40\n  value=\"http://c2.com/wiki/wiki-21st.jpg\">\n<input\n  name=html\n  type=hidden\n  value=\"\">\n<input\n  type=submit\n  value=submit>\n</center>\n</form>"
+        "text": "<form \n  method=post\n  action=\"http://home.c2.com:4010/image\"\n  style=\"background-color:#eee; padding:15px;\">\n<center>\nTransport Image to Wiki Page<br><br>\nurl:\n<input\n  name=text\n  size=40\n  value=\"http://c2.com/wiki/wiki-21st.jpg\">\n<input\n  name=html\n  type=hidden\n  value=\"\">\n<input\n  type=submit\n  value=submit>\n</center>\n</form>"
       },
       "after": "8a1c7ced09e2415c",
       "id": "f80adaee5751ad1e",
@@ -527,10 +543,43 @@
       "item": {
         "type": "html",
         "id": "f80adaee5751ad1e",
-        "text": "<form \n  action=\"http://fed.wiki.org:4010/image\"\n  style=\"background-color:#eee; padding:15px;\">\n<center>\nTransport Image to Wiki Page<br><br>\nurl:\n<input\n  name=text\n  size=40\n  value=\"http://c2.com/wiki/wiki-21st.jpg\">\n<input\n  name=html\n  type=hidden\n  value=\"\">\n<input\n  type=submit\n  value=submit>\n</center>\n</form>"
+        "text": "<form \n  action=\"http://home.c2.com:4010/image\"\n  style=\"background-color:#eee; padding:15px;\">\n<center>\nTransport Image to Wiki Page<br><br>\nurl:\n<input\n  name=text\n  size=40\n  value=\"http://c2.com/wiki/wiki-21st.jpg\">\n<input\n  name=html\n  type=hidden\n  value=\"\">\n<input\n  type=submit\n  value=submit>\n</center>\n</form>"
       },
       "date": 1460861990632
+    },
+    {
+      "type": "add",
+      "item": {
+        "type": "paragraph",
+        "id": "10e1986149bf11a7",
+        "text": "We special case one action url and handle it within the plugin without transporting through a remote service."
+      },
+      "after": "4319e863cb1ceb36",
+      "id": "10e1986149bf11a7",
+      "date": 1505016934142
+    },
+    {
+      "type": "add",
+      "item": {
+        "type": "code",
+        "id": "3230e0f921be8fe1",
+        "text": "<form action = \"http://new_page/\">"
+      },
+      "after": "10e1986149bf11a7",
+      "id": "3230e0f921be8fe1",
+      "date": 1505016946171
+    },
+    {
+      "type": "add",
+      "item": {
+        "type": "html",
+        "id": "b20c4680762fa185",
+        "text": "<form \n  action=\"http://new_page/\"\n  style=\"background-color:#eee; padding:15px;\">\n<center>\nCreate New Page<br><br>\n<input\n  name=title\n  size=40\n  placeholder=\"New Page Title\">\n<input\n  type=submit\n  value=create>\n</center>\n</form>",
+        "alias": "f80adaee5751ad1e"
+      },
+      "after": "3230e0f921be8fe1",
+      "id": "b20c4680762fa185",
+      "date": 1505016952682
     }
-  ],
-  "plugin": "html"
+  ]
 }
