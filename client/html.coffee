@@ -9,7 +9,15 @@ sanitize = require 'sanitize-caja'
 
 builtins =
   'http://new_page/': (params) ->
-    {title: params.title}
+    "title": params.title,
+    "story": [
+      "id": "98234090910324",
+      "type": "future",
+      "text": "Click to create this page.",
+      "title": params.title
+    ],
+    "journal": []
+
 
 emit = ($item, item) ->
   $item.append "<p>#{wiki.resolveLinks(item.text, sanitize)}</p>"
