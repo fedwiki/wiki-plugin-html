@@ -24,6 +24,7 @@ emit = ($item, item) ->
 
 bind = ($item, item) ->
   $item.dblclick -> wiki.textEditor $item, item
+  $item.find('input').dblclick (e) -> e.stopPropagation()
 
   $item.on 'submit', (e) ->
 
