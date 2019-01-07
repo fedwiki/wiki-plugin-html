@@ -5,7 +5,7 @@
  * https://github.com/fedwiki/wiki-plugin-html/blob/master/LICENSE.txt
 ###
 
-sanitize = require 'sanitize-caja'
+sanitize = require '@mapbox/sanitize-caja'
 
 builtins =
   'http://new_page/': (params) ->
