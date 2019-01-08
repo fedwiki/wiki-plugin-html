@@ -24,6 +24,8 @@
   },
   "dependencies": {},
   "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.2.3",
     "@mapbox/sanitize-caja": "^0.1.4",
     "coffeeify": "^3.0.1",
     "coffeescript": "^2.3.2",
