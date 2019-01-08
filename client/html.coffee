@@ -45,7 +45,7 @@ bind = ($item, item) ->
       show handler params
     else
       req =
-        type: "POST",
+        type: $item.find('form').attr('method') or "POST",
         url: e.target.action
         dataType: 'json',
         contentType: "application/json",
