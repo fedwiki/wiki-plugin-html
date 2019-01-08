@@ -37,6 +37,9 @@ bind = ($item, item) ->
     params = {}
     $item.find('input').serializeArray().map (obj) ->
       params[obj.name] = obj.value
+    button = e.originalEvent.explicitOriginalTarget
+    if button and button.name
+      params[button.name] = button.value
 
     if handler = builtins[e.target.action]
       show handler params
