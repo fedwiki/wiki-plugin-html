@@ -35,7 +35,7 @@ bind = ($item, item) ->
 
     e.preventDefault()
     params = {}
-    $item.find('input').serializeArray().map (obj) ->
+    $item.find('form').serializeArray().map (obj) ->
       params[obj.name] = obj.value
     button = e.originalEvent.explicitOriginalTarget
     if button and button.name
