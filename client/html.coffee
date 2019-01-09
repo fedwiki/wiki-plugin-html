@@ -5,7 +5,7 @@
  * https://github.com/fedwiki/wiki-plugin-html/blob/master/LICENSE.txt
 ###
 
-sanitize = require 'sanitize-caja'
+sanitize = require '@mapbox/sanitize-caja'
 
 builtins =
   'http://new_page/': (params) ->
@@ -26,6 +26,14 @@ bind = ($item, item) ->
   $item.dblclick -> wiki.textEditor $item, item
   $item.find('input').dblclick (e) -> e.stopPropagation()
 
+  el = $item.get(0)
+  lastButtonData = null
+  $form = $item.find('form')
+  $form.find(':submit').click (e) ->
+    button = e.target
+    if button and button.name
+      lastButtonData = { name: button.name, value: button.value }
+
   $item.on 'submit', (e) ->
 
     show = (page) ->
@@ -35,19 +43,21 @@ bind = ($item, item) ->
 
     e.preventDefault()
     params = {}
-    $item.find('input').serializeArray().map (obj) ->
+    $item.find('form').serializeArray().map (obj) ->
       params[obj.name] = obj.value
+    if lastButtonData and lastButtonData.name
+      params[lastButtonData.name] = lastButtonData.value
 
     if handler = builtins[e.target.action]
       show handler params
     else
       req =
-        type: "POST",
+        type: $item.find('form').attr('method') or "POST",
         url: e.target.action
         dataType: 'json',
         contentType: "application/json",
         data: JSON.stringify(params)
       $.ajax(req).done show
-
+      lastButtonData = null
 
 window.plugins.html = {emit, bind} if window?

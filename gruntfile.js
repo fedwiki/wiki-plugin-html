@@ -11,7 +11,7 @@ module.exports = function (grunt) {
         src: ['client/html.coffee'],
         dest: 'client/html.js',
         options: {
-          transform: ['coffeeify'],
+          transform: [['coffeeify', {transpile: []}]],
           browserifyOptions: {
             extensions: ".coffee"
           }
