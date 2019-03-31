@@ -1,0 +1,264 @@
+{
+  "title": "Create New Page",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "6674ae84ed5aef7b",
+      "text": "Here we consider when, where and how to make new pages. Pages and links go together. You can make either one first. One without the other leaves a site feeling unfinished which isn't a huge problem."
+    },
+    {
+      "type": "markdown",
+      "id": "e5d38c80d8536f00",
+      "text": "# Links"
+    },
+    {
+      "type": "paragraph",
+      "id": "1aa5ce2ed36d53bb",
+      "text": "Make a link first by writing the title of a page inside double square brackets. This makes a link. Click it. If the page doesn't exist you will be offered the chance to make it."
+    },
+    {
+      "type": "markdown",
+      "id": "0f9f393fe381cf43",
+      "text": "# Pages"
+    },
+    {
+      "type": "paragraph",
+      "id": "7c49a0c26a57943c",
+      "text": "Make a page first by entering the title in the form below and then click create. You will be offered the chance to make the page you named. If the name is too long to look good then repeat with a shorter name."
+    },
+    {
+      "type": "html",
+      "id": "f80adaee5751ad1e",
+      "text": "<form \n  action=\"http://new_page/\"\n  style=\"background-color:#eee; padding:15px;\">\n\nCreate New Page<br><br>\n<input\n  name=title\n  size=50\n  placeholder=\"New Page Title\">\n<input\n  type=submit\n  value=create>\n</center>\n</form>"
+    },
+    {
+      "type": "markdown",
+      "id": "230e90136e5c6618",
+      "text": "# Tips"
+    },
+    {
+      "type": "paragraph",
+      "id": "dcfd76cd1d3fdf8e",
+      "text": "If you want others to see the pages you make then be sure that you started this browser tab at a site you own and have logged into it. Otherwise new pages are stored privately in your browser's local storage."
+    },
+    {
+      "type": "paragraph",
+      "id": "7d0cafe4fbd4563a",
+      "text": "Two or three word titles are the best. Use phrases that will quickly enter the vernacular of your community. The first paragraph of a page is called the synopsis and it is a good place to enlarge the title as you complete the page."
+    },
+    {
+      "type": "paragraph",
+      "id": "e14c9f3764078f1d",
+      "text": "Make page titles that fit in with how pages are named within your community. Try searching for words you might use. Maybe the page already exists. Or maybe you will find the perfect title that energizes writing your own."
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Create New Page",
+        "story": []
+      },
+      "date": 1554071919133
+    },
+    {
+      "item": {
+        "type": "paragraph",
+        "id": "6674ae84ed5aef7b",
+        "text": "Here we consider when, where and how to make new pages. Pages and links go together. You can make either one first. One without the other leaves a site feeling unfinished which isn't a huge problem."
+      },
+      "id": "6674ae84ed5aef7b",
+      "type": "add",
+      "date": 1554071952382
+    },
+    {
+      "type": "edit",
+      "id": "6674ae84ed5aef7b",
+      "item": {
+        "type": "paragraph",
+        "id": "6674ae84ed5aef7b",
+        "text": "Here we consider when, where and how to make new pages. Pages and links go together. You can make either one first. One without the other leaves a site feeling unfinished which isn't a huge problem."
+      },
+      "date": 1554072182704
+    },
+    {
+      "type": "add",
+      "id": "e5d38c80d8536f00",
+      "item": {
+        "type": "markdown",
+        "id": "e5d38c80d8536f00",
+        "text": "# Links"
+      },
+      "after": "6674ae84ed5aef7b",
+      "date": 1554072198586
+    },
+    {
+      "type": "add",
+      "id": "1aa5ce2ed36d53bb",
+      "item": {
+        "type": "paragraph",
+        "id": "1aa5ce2ed36d53bb",
+        "text": "Make a link first by writing the title of a page inside double square brackets. This makes a link. Click it. If the page doesn't exist you will be offered the chance to make it."
+      },
+      "after": "e5d38c80d8536f00",
+      "date": 1554072298768
+    },
+    {
+      "type": "edit",
+      "id": "e5d38c80d8536f00",
+      "item": {
+        "type": "markdown",
+        "id": "e5d38c80d8536f00",
+        "text": "# Links"
+      },
+      "date": 1554072320226
+    },
+    {
+      "type": "add",
+      "id": "0f9f393fe381cf43",
+      "item": {
+        "type": "markdown",
+        "id": "0f9f393fe381cf43",
+        "text": "# Pages"
+      },
+      "after": "1aa5ce2ed36d53bb",
+      "date": 1554072330607
+    },
+    {
+      "type": "add",
+      "id": "7c49a0c26a57943c",
+      "item": {
+        "type": "paragraph",
+        "id": "7c49a0c26a57943c",
+        "text": "Make a page first by entering the title in the form below and then click create. You will be offered the chance to make the page you named. If the name is too long to look good then repeat with a shorter name."
+      },
+      "after": "0f9f393fe381cf43",
+      "date": 1554072370152
+    },
+    {
+      "type": "edit",
+      "id": "7c49a0c26a57943c",
+      "item": {
+        "type": "paragraph",
+        "id": "7c49a0c26a57943c",
+        "text": "Make a page first by entering the title in the form below and then click create. You will be offered the chance to make the page you named. If the name is too long to look good then repeat with a shorter name."
+      },
+      "date": 1554072470572
+    },
+    {
+      "type": "edit",
+      "id": "7c49a0c26a57943c",
+      "item": {
+        "type": "paragraph",
+        "id": "7c49a0c26a57943c",
+        "text": "Make a page first by entering the title in the form below and then click create. You will be offered the chance to make the page you named. If the name is too long to look good then repeat with a shorter name."
+      },
+      "date": 1554072559897
+    },
+    {
+      "type": "edit",
+      "id": "7c49a0c26a57943c",
+      "item": {
+        "type": "paragraph",
+        "id": "7c49a0c26a57943c",
+        "text": "Make a page first by entering the title in the form below and then click create. You will be offered the chance to make the page you named. If the name is too long to look good then repeat with a shorter name."
+      },
+      "date": 1554072579513
+    },
+    {
+      "type": "edit",
+      "id": "7c49a0c26a57943c",
+      "item": {
+        "type": "paragraph",
+        "id": "7c49a0c26a57943c",
+        "text": "Make a page first by entering the title in the form below and then click create. You will be offered the chance to make the page you named. If the name is too long to look good then repeat with a shorter name."
+      },
+      "date": 1554072632301
+    },
+    {
+      "type": "edit",
+      "id": "0f9f393fe381cf43",
+      "item": {
+        "type": "markdown",
+        "id": "0f9f393fe381cf43",
+        "text": "# Pages"
+      },
+      "date": 1554072638502
+    },
+    {
+      "type": "add",
+      "item": {
+        "type": "html",
+        "id": "f80adaee5751ad1e",
+        "text": "<form \n  action=\"http://new_page/\"\n  style=\"background-color:#eee; padding:15px;\">\n\nCreate New Page<br><br>\n<input\n  name=title\n  size=50\n  placeholder=\"New Page Title\">\n<input\n  type=submit\n  value=create>\n</center>\n</form>"
+      },
+      "after": "7c49a0c26a57943c",
+      "id": "f80adaee5751ad1e",
+      "date": 1554072699552
+    },
+    {
+      "item": {
+        "type": "markdown",
+        "id": "230e90136e5c6618",
+        "text": "# Tips"
+      },
+      "id": "230e90136e5c6618",
+      "type": "add",
+      "after": "f80adaee5751ad1e",
+      "date": 1554072730091
+    },
+    {
+      "type": "edit",
+      "id": "230e90136e5c6618",
+      "item": {
+        "type": "markdown",
+        "id": "230e90136e5c6618",
+        "text": "# Tips"
+      },
+      "date": 1554072742684
+    },
+    {
+      "item": {
+        "type": "paragraph",
+        "id": "dcfd76cd1d3fdf8e",
+        "text": "If you want others to see the pages you make then be sure that you started this browser tab at a site you own and have logged into it. Otherwise new pages are stored privately in your browser's local storage."
+      },
+      "id": "dcfd76cd1d3fdf8e",
+      "type": "add",
+      "after": "230e90136e5c6618",
+      "date": 1554072828078
+    },
+    {
+      "type": "edit",
+      "id": "dcfd76cd1d3fdf8e",
+      "item": {
+        "type": "paragraph",
+        "id": "dcfd76cd1d3fdf8e",
+        "text": "If you want others to see the pages you make then be sure that you started this browser tab at a site you own and have logged into it. Otherwise new pages are stored privately in your browser's local storage."
+      },
+      "date": 1554072938485
+    },
+    {
+      "type": "add",
+      "id": "7d0cafe4fbd4563a",
+      "item": {
+        "type": "paragraph",
+        "id": "7d0cafe4fbd4563a",
+        "text": "Two or three word titles are the best. Use phrases that will quickly enter the vernacular of your community. The first paragraph of a page is called the synopsis and it is a good place to enlarge the title as you complete the page."
+      },
+      "after": "dcfd76cd1d3fdf8e",
+      "date": 1554073146896
+    },
+    {
+      "type": "add",
+      "id": "e14c9f3764078f1d",
+      "item": {
+        "type": "paragraph",
+        "id": "e14c9f3764078f1d",
+        "text": "Make page titles that fit in with how pages are named within your community. Try searching for words you might use. Maybe the page already exists. Or maybe you will find the perfect title that energizes writing your own."
+      },
+      "after": "7d0cafe4fbd4563a",
+      "date": 1554073317043
+    }
+  ]
+}
