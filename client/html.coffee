@@ -23,8 +23,13 @@ emit = ($item, item) ->
   $item.append "<p>#{wiki.resolveLinks(item.text, sanitize)}</p>"
 
 bind = ($item, item) ->
+  stopBubble = (e) ->
+    if e.keyCode is 37 or e.keyCode is 39  # left or right arrow keys
+      e.stopPropagation()
+
   $item.dblclick -> wiki.textEditor $item, item
   $item.find('input').dblclick (e) -> e.stopPropagation()
+  $item.find('input').keydown (e) -> stopBubble(e)
 
   el = $item.get(0)
   lastButtonData = null
