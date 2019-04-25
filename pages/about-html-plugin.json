@@ -1,0 +1,585 @@
+{
+  "title": "About HTML Plugin",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "9c194f37e9fc5d1b",
+      "text": "The HTML plugin allows you to format text using HTML tags. The text you write is checked to be sure it won't interfere with other websites where it might appear."
+    },
+    {
+      "type": "paragraph",
+      "id": "915537d97da73c42",
+      "text": "See [https://github.com/fedwiki/wiki-plugin-html GitHub] for plugin source."
+    },
+    {
+      "type": "paragraph",
+      "id": "cbb00b60e997d4b3",
+      "text": "This markup uses tags enclosed in angle brackets to enclose text to be formatted. The matching end tag includes a forward slash. A few tags don't expect to be matched with end tags."
+    },
+    {
+      "type": "html",
+      "id": "d5ef9127d6b9c538",
+      "text": "<h3> Formatting </h3>"
+    },
+    {
+      "type": "html",
+      "id": "35e6304e6d3c74e4",
+      "text": "Use &lt;b>...&lt;/b> for <b>bold</b>."
+    },
+    {
+      "type": "html",
+      "id": "ffea984f189ed538",
+      "text": "Use &lt;i>...&lt;/i> for <i>italic</i>."
+    },
+    {
+      "type": "html",
+      "id": "a15eb154dbd1c13d",
+      "text": "Use &lt;h3>...&lt;/h3> for headings. By convention we use size 3."
+    },
+    {
+      "type": "html",
+      "id": "dc5098757cfc4c3e",
+      "text": "<h3> Forms </h3>"
+    },
+    {
+      "type": "paragraph",
+      "id": "8a1c7ced09e2415c",
+      "text": "Use <form ...> ... <input type=submit ...></form> for posts to remote services. Services are expected to respond with json for a page to be added to the lineup."
+    },
+    {
+      "type": "paragraph",
+      "id": "555a2d4d5f96b0b9",
+      "text": "For example, this form submits an image url to a remote service as if the image had been dropped on an image transporter. See [[About Transport Plugin]]"
+    },
+    {
+      "type": "html",
+      "id": "f80adaee5751ad1e",
+      "text": "<form \n  action=\"http://home.c2.com:4010/image\"\n  style=\"background-color:#eee; padding:15px;\">\n<center>\nTransport Image to Wiki Page<br><br>\nurl:\n<input\n  name=text\n  size=40\n  value=\"http://c2.com/wiki/wiki-21st.jpg\">\n<input\n  name=html\n  type=hidden\n  value=\"\">\n<input\n  type=submit\n  value=submit>\n</center>\n</form>"
+    },
+    {
+      "type": "paragraph",
+      "id": "4319e863cb1ceb36",
+      "text": "Note: fidelity with the Transport plugin api is not required of form handlers."
+    },
+    {
+      "type": "paragraph",
+      "id": "10e1986149bf11a7",
+      "text": "We special case one action url and handle it within the plugin without transporting through a remote service."
+    },
+    {
+      "type": "code",
+      "id": "3230e0f921be8fe1",
+      "text": "<form action = \"http://new_page/\">"
+    },
+    {
+      "type": "html",
+      "id": "b20c4680762fa185",
+      "text": "<form \n  action=\"http://new_page/\"\n  style=\"background-color:#eee; padding:15px;\">\n<center>\nCreate New Page<br><br>\n<input\n  name=title\n  size=40\n  placeholder=\"New Page Title\">\n<input\n  type=submit\n  value=create>\n</center>\n</form>",
+      "alias": "f80adaee5751ad1e"
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "About HTML Plugin",
+        "story": []
+      },
+      "date": 1402292835493
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "9c194f37e9fc5d1b"
+      },
+      "id": "9c194f37e9fc5d1b",
+      "type": "add",
+      "date": 1402292837284
+    },
+    {
+      "type": "edit",
+      "id": "9c194f37e9fc5d1b",
+      "item": {
+        "type": "paragraph",
+        "id": "9c194f37e9fc5d1b",
+        "text": "The HTML plugin allows you to format text using HTML tags. The text you write is checked to be sure it won't interfere with other websites where it might appear."
+      },
+      "date": 1402293031655
+    },
+    {
+      "item": {
+        "type": "paragraph",
+        "id": "915537d97da73c42",
+        "text": ""
+      },
+      "id": "915537d97da73c42",
+      "type": "add",
+      "after": "9c194f37e9fc5d1b",
+      "date": 1402293031671
+    },
+    {
+      "type": "edit",
+      "id": "915537d97da73c42",
+      "item": {
+        "type": "paragraph",
+        "id": "915537d97da73c42",
+        "text": "See [https://github.com/fedwiki/wiki-plugin-html GitHub] for plugin source."
+      },
+      "date": 1402293082219
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "35e6304e6d3c74e4"
+      },
+      "id": "35e6304e6d3c74e4",
+      "type": "add",
+      "after": "915537d97da73c42",
+      "date": 1402293130501
+    },
+    {
+      "type": "edit",
+      "id": "35e6304e6d3c74e4",
+      "item": {
+        "type": "paragraph",
+        "id": "35e6304e6d3c74e4",
+        "text": "Use b for bold."
+      },
+      "date": 1402293203810
+    },
+    {
+      "item": {
+        "type": "paragraph",
+        "id": "ffea984f189ed538",
+        "text": ""
+      },
+      "id": "ffea984f189ed538",
+      "type": "add",
+      "after": "35e6304e6d3c74e4",
+      "date": 1402293203827
+    },
+    {
+      "type": "edit",
+      "id": "ffea984f189ed538",
+      "item": {
+        "type": "paragraph",
+        "id": "ffea984f189ed538",
+        "text": "Use i for italic."
+      },
+      "date": 1402293210534
+    },
+    {
+      "item": {
+        "type": "paragraph",
+        "id": "a15eb154dbd1c13d",
+        "text": ""
+      },
+      "id": "a15eb154dbd1c13d",
+      "type": "add",
+      "after": "ffea984f189ed538",
+      "date": 1402293210545
+    },
+    {
+      "type": "edit",
+      "id": "a15eb154dbd1c13d",
+      "item": {
+        "type": "paragraph",
+        "id": "a15eb154dbd1c13d",
+        "text": "Use h3 for headings."
+      },
+      "date": 1402293224878
+    },
+    {
+      "item": {
+        "type": "paragraph",
+        "id": "905e222e6c373126",
+        "text": ""
+      },
+      "id": "905e222e6c373126",
+      "type": "add",
+      "after": "a15eb154dbd1c13d",
+      "date": 1402293224889
+    },
+    {
+      "type": "remove",
+      "id": "905e222e6c373126",
+      "date": 1402293247947
+    },
+    {
+      "item": {
+        "type": "paragraph",
+        "id": "e1a3d088657102b1",
+        "text": ""
+      },
+      "id": "e1a3d088657102b1",
+      "type": "add",
+      "after": "915537d97da73c42",
+      "date": 1402293300898
+    },
+    {
+      "type": "remove",
+      "id": "e1a3d088657102b1",
+      "date": 1402293304353
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "d5ef9127d6b9c538"
+      },
+      "id": "d5ef9127d6b9c538",
+      "type": "add",
+      "after": "a15eb154dbd1c13d",
+      "date": 1402293306622
+    },
+    {
+      "type": "edit",
+      "id": "d5ef9127d6b9c538",
+      "item": {
+        "type": "html",
+        "id": "d5ef9127d6b9c538",
+        "text": "<h3> Formatting"
+      },
+      "date": 1402293317939
+    },
+    {
+      "type": "move",
+      "order": [
+        "9c194f37e9fc5d1b",
+        "915537d97da73c42",
+        "d5ef9127d6b9c538",
+        "35e6304e6d3c74e4",
+        "ffea984f189ed538",
+        "a15eb154dbd1c13d"
+      ],
+      "id": "d5ef9127d6b9c538",
+      "date": 1402293321572
+    },
+    {
+      "type": "edit",
+      "id": "a15eb154dbd1c13d",
+      "item": {
+        "type": "paragraph",
+        "id": "a15eb154dbd1c13d",
+        "text": "Use h3 for headings. Other numbers work but we prefer size 3."
+      },
+      "date": 1402293375153
+    },
+    {
+      "type": "edit",
+      "id": "a15eb154dbd1c13d",
+      "item": {
+        "type": "paragraph",
+        "id": "a15eb154dbd1c13d",
+        "text": "Use h3 for headings. By convention we use size 3."
+      },
+      "date": 1402293398729
+    },
+    {
+      "item": {
+        "type": "paragraph",
+        "id": "cbb00b60e997d4b3",
+        "text": ""
+      },
+      "id": "cbb00b60e997d4b3",
+      "type": "add",
+      "after": "915537d97da73c42",
+      "date": 1402293466354
+    },
+    {
+      "type": "edit",
+      "id": "cbb00b60e997d4b3",
+      "item": {
+        "type": "paragraph",
+        "id": "cbb00b60e997d4b3",
+        "text": "This markup uses tags enclosed in angle brackets to enclose text to be formatted. The matching end tag includes a forward slash. A few tags don't expect to be matched with end tags."
+      },
+      "date": 1402293581706
+    },
+    {
+      "type": "edit",
+      "id": "35e6304e6d3c74e4",
+      "item": {
+        "type": "paragraph",
+        "id": "35e6304e6d3c74e4",
+        "text": "Use b for <b>bold</b>."
+      },
+      "date": 1418315262794
+    },
+    {
+      "type": "edit",
+      "id": "35e6304e6d3c74e4",
+      "item": {
+        "type": "html",
+        "id": "35e6304e6d3c74e4",
+        "text": "Use b for <b>bold</b>."
+      },
+      "date": 1418315264532
+    },
+    {
+      "type": "edit",
+      "id": "35e6304e6d3c74e4",
+      "item": {
+        "type": "html",
+        "id": "35e6304e6d3c74e4",
+        "text": "Use b for <b>bold</b>."
+      },
+      "date": 1418315264534
+    },
+    {
+      "type": "edit",
+      "id": "35e6304e6d3c74e4",
+      "item": {
+        "type": "html",
+        "id": "35e6304e6d3c74e4",
+        "text": "Use &lt;b>...&lt;/b> for <b>bold</b>."
+      },
+      "date": 1418315291977
+    },
+    {
+      "type": "edit",
+      "id": "ffea984f189ed538",
+      "item": {
+        "type": "paragraph",
+        "id": "ffea984f189ed538",
+        "text": "Use i for <i>italic</i>."
+      },
+      "date": 1418315326040
+    },
+    {
+      "type": "edit",
+      "id": "ffea984f189ed538",
+      "item": {
+        "type": "html",
+        "id": "ffea984f189ed538",
+        "text": "Use i for <i>italic</i>."
+      },
+      "date": 1418315327586
+    },
+    {
+      "type": "edit",
+      "id": "ffea984f189ed538",
+      "item": {
+        "type": "html",
+        "id": "ffea984f189ed538",
+        "text": "Use i for <i>italic</i>."
+      },
+      "date": 1418315327589
+    },
+    {
+      "type": "edit",
+      "id": "ffea984f189ed538",
+      "item": {
+        "type": "html",
+        "id": "ffea984f189ed538",
+        "text": "Use &lt;i>...&lt;/i> for <i>italic</i>."
+      },
+      "date": 1418315351732
+    },
+    {
+      "type": "edit",
+      "id": "a15eb154dbd1c13d",
+      "item": {
+        "type": "paragraph",
+        "id": "a15eb154dbd1c13d",
+        "text": "Use &lt;h3> for headings. By convention we use size 3."
+      },
+      "date": 1418315376535
+    },
+    {
+      "type": "edit",
+      "id": "a15eb154dbd1c13d",
+      "item": {
+        "type": "html",
+        "id": "a15eb154dbd1c13d",
+        "text": "Use &lt;h3> for headings. By convention we use size 3."
+      },
+      "date": 1418315383641
+    },
+    {
+      "type": "edit",
+      "id": "a15eb154dbd1c13d",
+      "item": {
+        "type": "html",
+        "id": "a15eb154dbd1c13d",
+        "text": "Use &lt;h3> for headings. By convention we use size 3."
+      },
+      "date": 1418315383644
+    },
+    {
+      "type": "edit",
+      "id": "a15eb154dbd1c13d",
+      "item": {
+        "type": "html",
+        "id": "a15eb154dbd1c13d",
+        "text": "Use &lt;h3>...&lt;/h3> for headings. By convention we use size 3."
+      },
+      "date": 1418315409686
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "dc5098757cfc4c3e"
+      },
+      "id": "dc5098757cfc4c3e",
+      "type": "add",
+      "after": "a15eb154dbd1c13d",
+      "date": 1460846233633
+    },
+    {
+      "type": "edit",
+      "id": "dc5098757cfc4c3e",
+      "item": {
+        "type": "html",
+        "id": "dc5098757cfc4c3e",
+        "text": "<h3> Forms </h3>"
+      },
+      "date": 1460846331503
+    },
+    {
+      "type": "edit",
+      "id": "d5ef9127d6b9c538",
+      "item": {
+        "type": "html",
+        "id": "d5ef9127d6b9c538",
+        "text": "<h3> Formatting </h3>"
+      },
+      "date": 1460846339916
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "8a1c7ced09e2415c"
+      },
+      "id": "8a1c7ced09e2415c",
+      "type": "add",
+      "after": "dc5098757cfc4c3e",
+      "date": 1460846350891
+    },
+    {
+      "type": "edit",
+      "id": "8a1c7ced09e2415c",
+      "item": {
+        "type": "paragraph",
+        "id": "8a1c7ced09e2415c",
+        "text": "Use <form ...> ... <input type=submit ...></form> for posts to remote services. Services are expected to respond with json for a page to be added to the lineup."
+      },
+      "date": 1460846670535
+    },
+    {
+      "type": "add",
+      "id": "555a2d4d5f96b0b9",
+      "item": {
+        "type": "paragraph",
+        "id": "555a2d4d5f96b0b9",
+        "text": "For example, this form submits an image url as if it had been dropped on an image transporter. See [[About Transport Plugin]]"
+      },
+      "after": "8a1c7ced09e2415c",
+      "date": 1460846746994
+    },
+    {
+      "type": "edit",
+      "id": "555a2d4d5f96b0b9",
+      "item": {
+        "type": "paragraph",
+        "id": "555a2d4d5f96b0b9",
+        "text": "For example, this form submits an image url to a remote service as if the image had been dropped on an image transporter. See [[About Transport Plugin]]"
+      },
+      "date": 1460846816635
+    },
+    {
+      "type": "add",
+      "item": {
+        "type": "html",
+        "id": "f80adaee5751ad1e",
+        "text": "<form \n  method=post\n  action=\"http://home.c2.com:4010/image\"\n  style=\"background-color:#eee; padding:15px;\">\n<center>\nTransport Image to Wiki Page<br><br>\nurl:\n<input\n  name=text\n  size=40\n  value=\"http://c2.com/wiki/wiki-21st.jpg\">\n<input\n  name=html\n  type=hidden\n  value=\"\">\n<input\n  type=submit\n  value=submit>\n</center>\n</form>"
+      },
+      "after": "8a1c7ced09e2415c",
+      "id": "f80adaee5751ad1e",
+      "date": 1460846863200
+    },
+    {
+      "type": "add",
+      "item": {
+        "type": "paragraph",
+        "id": "4319e863cb1ceb36",
+        "text": "Here we try to duplicate the image transporter, although api fidelity with the Transport plugin is not required of form handlers."
+      },
+      "after": "f80adaee5751ad1e",
+      "id": "4319e863cb1ceb36",
+      "date": 1460846876988
+    },
+    {
+      "type": "move",
+      "order": [
+        "9c194f37e9fc5d1b",
+        "915537d97da73c42",
+        "cbb00b60e997d4b3",
+        "d5ef9127d6b9c538",
+        "35e6304e6d3c74e4",
+        "ffea984f189ed538",
+        "a15eb154dbd1c13d",
+        "dc5098757cfc4c3e",
+        "8a1c7ced09e2415c",
+        "555a2d4d5f96b0b9",
+        "f80adaee5751ad1e",
+        "4319e863cb1ceb36"
+      ],
+      "id": "555a2d4d5f96b0b9",
+      "date": 1460846888582
+    },
+    {
+      "type": "edit",
+      "id": "4319e863cb1ceb36",
+      "item": {
+        "type": "paragraph",
+        "id": "4319e863cb1ceb36",
+        "text": "Note: fidelity with the Transport plugin api is not required of form handlers."
+      },
+      "date": 1460846975355
+    },
+    {
+      "type": "edit",
+      "id": "f80adaee5751ad1e",
+      "item": {
+        "type": "html",
+        "id": "f80adaee5751ad1e",
+        "text": "<form \n  action=\"http://home.c2.com:4010/image\"\n  style=\"background-color:#eee; padding:15px;\">\n<center>\nTransport Image to Wiki Page<br><br>\nurl:\n<input\n  name=text\n  size=40\n  value=\"http://c2.com/wiki/wiki-21st.jpg\">\n<input\n  name=html\n  type=hidden\n  value=\"\">\n<input\n  type=submit\n  value=submit>\n</center>\n</form>"
+      },
+      "date": 1460861990632
+    },
+    {
+      "type": "add",
+      "item": {
+        "type": "paragraph",
+        "id": "10e1986149bf11a7",
+        "text": "We special case one action url and handle it within the plugin without transporting through a remote service."
+      },
+      "after": "4319e863cb1ceb36",
+      "id": "10e1986149bf11a7",
+      "date": 1505016934142
+    },
+    {
+      "type": "add",
+      "item": {
+        "type": "code",
+        "id": "3230e0f921be8fe1",
+        "text": "<form action = \"http://new_page/\">"
+      },
+      "after": "10e1986149bf11a7",
+      "id": "3230e0f921be8fe1",
+      "date": 1505016946171
+    },
+    {
+      "type": "add",
+      "item": {
+        "type": "html",
+        "id": "b20c4680762fa185",
+        "text": "<form \n  action=\"http://new_page/\"\n  style=\"background-color:#eee; padding:15px;\">\n<center>\nCreate New Page<br><br>\n<input\n  name=title\n  size=40\n  placeholder=\"New Page Title\">\n<input\n  type=submit\n  value=create>\n</center>\n</form>",
+        "alias": "f80adaee5751ad1e"
+      },
+      "after": "3230e0f921be8fe1",
+      "id": "b20c4680762fa185",
+      "date": 1505016952682
+    }
+  ]
+}
