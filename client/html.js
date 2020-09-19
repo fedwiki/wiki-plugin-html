@@ -4,6 +4,7 @@
  * Licensed under the MIT license.
  * https://github.com/fedwiki/wiki-plugin-html/blob/master/LICENSE.txt
  */
+var builtins;
 
 const dependencyLoaded = import('/plugins/html/DOMPurify-2.0.15/purify.js');
 
@@ -24,11 +25,11 @@ builtins = {
 
 async function emit($item, item) {
   await dependencyLoaded;
-  $item.append(
-    '<p style="overflow-x:scroll;">'
-      + (window.wiki.resolveLinks(item.text, window.DOMPurify.sanitize))
-      + "</p>"
-  );
+  function sanitize(dirty) {
+    return window.DOMPurify.sanitize(dirty, {SANITIZE_DOM: false});
+  }
+  $item.css('overflow-x', 'auto');
+  $item.append(window.wiki.resolveLinks(item.text, sanitize));
   var $form, el, lastButtonData;
   $item.dblclick(() => window.wiki.textEditor($item, item));
   $item.find('input').dblclick(e => e.stopPropagation());
