@@ -24,15 +24,7 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "@babel/core": "^7.4.3",
-    "@babel/preset-env": "^7.4.3",
-    "@mapbox/sanitize-caja": "^0.1.4",
-    "coffeeify": "^3.0.1",
-    "coffeescript": "^2.4.1",
     "grunt": "^1.0.4",
-    "grunt-browserify": "^5.3.0",
-    "grunt-contrib-coffee": "^2.1.0",
-    "grunt-contrib-watch": "^1.1.0",
     "grunt-git-authors": "~3"
   },
   "license": "MIT",
@@ -44,6 +36,6 @@
     "url": "https://github.com/fedwiki/wiki-plugin-html/issues"
   },
   "engines": {
-    "node": ">=0.10"
+    "node": ">=12.0"
   }
 }
