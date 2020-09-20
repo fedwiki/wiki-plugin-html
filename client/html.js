@@ -29,7 +29,12 @@ async function emit($item, item) {
     return window.DOMPurify.sanitize(dirty, {SANITIZE_DOM: false});
   }
   $item.css('overflow-x', 'auto');
-  $item.append(window.wiki.resolveLinks(item.text, sanitize));
+  $item.append(
+    `<style>
+img[src="/images/external-link-ltr-icon.png"] {display:none;}
+a.external::after {content:url(/images/external-link-ltr-icon.png);}
+</style>`,
+    window.wiki.resolveLinks(item.text, sanitize));
   var $form, el, lastButtonData;
   $item.dblclick(() => window.wiki.textEditor($item, item));
   $item.find('input').dblclick(e => e.stopPropagation());
