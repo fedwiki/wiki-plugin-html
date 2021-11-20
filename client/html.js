@@ -4,9 +4,8 @@
  * Licensed under the MIT license.
  * https://github.com/fedwiki/wiki-plugin-html/blob/master/LICENSE.txt
  */
-var bind, builtins, emit, sanitize;
 
-sanitize = require('@mapbox/sanitize-caja');
+const dependencyLoaded = import('/plugins/html/DOMPurify-2.0.15/purify.js');
 
 builtins = {
   'http://new_page/': params => ({
@@ -23,11 +22,13 @@ builtins = {
   })
 };
 
-emit = function($item, item) {
-  return $item.append("<p>" + (window.wiki.resolveLinks(item.text, sanitize)) + "</p>");
-};
-
-bind = function($item, item) {
+async function emit($item, item) {
+  await dependencyLoaded;
+  $item.append(
+    '<p style="overflow-x:scroll;">'
+      + (window.wiki.resolveLinks(item.text, window.DOMPurify.sanitize))
+      + "</p>"
+  );
   var $form, el, lastButtonData;
   $item.dblclick(() => window.wiki.textEditor($item, item));
   $item.find('input').dblclick(e => e.stopPropagation());
@@ -43,8 +44,7 @@ bind = function($item, item) {
     }
   });
   return $item.on('submit', function(e) {
-    var handler, params, req, show;
-    show = function(page) {
+    const show = function(page) {
       var $page, resultPage;
       $page = $(e.target).parents('.page');
       resultPage = window.wiki.newPage(page);
@@ -53,7 +53,7 @@ bind = function($item, item) {
       });
     };
     e.preventDefault();
-    params = {};
+    const params = {};
     $item.find('form').serializeArray().map(({name, value}) => params[name] = value);
     if (lastButtonData && lastButtonData.name) {
       params[lastButtonData.name] = lastButtonData.value;
@@ -62,7 +62,7 @@ bind = function($item, item) {
     if (handler) {
       return show(handler(params));
     } else {
-      req = {
+      const req = {
         type: $item.find('form').attr('method') || "POST",
         url: e.target.action,
         dataType: 'json',
@@ -73,7 +73,10 @@ bind = function($item, item) {
       return lastButtonData = null;
     }
   });
-};
+
+}
+
+function bind($item, item) {};
 
 if (typeof window !== "undefined" && window !== null) {
   window.plugins.html = {
