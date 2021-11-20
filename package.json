@@ -13,11 +13,10 @@
     "url": "http://ward.fed.wiki.org"
   },
   "contributors": [
-    {
-      "name": "Eric Dobbs",
-      "email": "eric@dobbse.net",
-      "url": "https://wiki.dbbs.co"
-    }
+    "Ward Cunningham <ward@c2.com>",
+    "Ward Cunningham <ward@newrelic.com>",
+    "Paul Rodwell <paul.rodwell@btinternet.com>",
+    "Eric Dobbs <eric@dobbse.net>"
   ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -34,8 +33,5 @@
   },
   "bugs": {
     "url": "https://github.com/fedwiki/wiki-plugin-html/issues"
-  },
-  "engines": {
-    "node": ">=12.0"
   }
 }
