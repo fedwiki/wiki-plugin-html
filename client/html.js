@@ -46,6 +46,14 @@ a.external::after {content:url(/images/external-link-ltr-icon.png);}
   var $form, el, lastButtonData;
   $item.dblclick(() => window.wiki.textEditor($item, item));
   $item.find('input').dblclick(e => e.stopPropagation());
+  $item.find('svg a[data-title]').click(event => {
+    event.preventDefault();
+    event.stopPropagation();
+    let anchor = event.target.closest('a[data-title]');
+    let page = event.shiftKey ? null : $(anchor).parents('.page');
+    let {title, site} = anchor.dataset;
+    window.wiki.doInternalLink(title, page, site)
+  });
   el = $item.get(0);
   lastButtonData = null;
   $form = $item.find('form');
