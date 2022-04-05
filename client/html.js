@@ -23,7 +23,7 @@ builtins = {
         }
       ]
     }
-    page.journal = [{type: "create", date, item:clone(page)}]
+    page.journal = []
     return page
   }
 };
