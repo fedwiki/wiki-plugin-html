@@ -10,9 +10,7 @@ const dependencyLoaded = import('/plugins/html/DOMPurify-2.3.3/purify.min.js');
 
 builtins = {
   'http://new_page/': params => {
-    const clone = obj => JSON.parse(JSON.stringify(obj))
-    const date = Date.now()
-    const page = {
+    return {
       "title": params.title,
       "story": [
         {
@@ -21,10 +19,9 @@ builtins = {
           "text": "Click to create this page.",
           "title": params.title
         }
-      ]
+      ],
+      "journal": []
     }
-    page.journal = [{type: "create", date, item:clone(page)}]
-    return page
   }
 };
 
