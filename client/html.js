@@ -29,8 +29,7 @@ async function emit($item, item) {
   await dependencyLoaded;
   function sanitize(dirty) {
     return window.DOMPurify.sanitize(dirty, {
-      SANITIZE_DOM: false,
-      ADD_TAGS: ['foreignObject']
+      ADD_TAGS: ['foreignObject', 'feDropShadow']
     });
   }
   $item.css('overflow-x', 'auto');
