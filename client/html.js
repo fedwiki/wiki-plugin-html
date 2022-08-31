@@ -10,14 +10,15 @@ const dependencyLoaded = import('/plugins/html/DOMPurify-2.3.8/purify.min.js');
 
 builtins = {
   'http://new_page/': params => {
+    let title = params.title.trim()
     return {
-      "title": params.title,
+      "title": title,
       "story": [
         {
           "id": "98234090910324",
           "type": "future",
           "text": "Click to create this page.",
-          "title": params.title
+          "title": title
         }
       ],
       "journal": []
