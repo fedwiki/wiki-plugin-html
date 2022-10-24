@@ -11,16 +11,63 @@ const dependencyLoaded = import('/plugins/html/DOMPurify-2.3.8/purify.min.js');
 builtins = {
   'http://new_page/': params => {
     let title = params.title.trim()
+    let slug = wiki.asSlug(title)
+    console.log('new page', title, slug)
+    let hits = []
+    let story = []
+    let foundLocally = false
+
+    Object.keys(wiki.neighborhoodObject.sites).forEach((site, index) => {
+      info = wiki.neighborhoodObject.sites[site]
+      if (info.sitemap != null) {
+        result = info.sitemap.find(element => element.slug == slug)
+        if (result != null) {
+          if (index == 0) {foundLocally = true}
+          hits.push({
+            "id": wiki.itemId,
+            "type": "reference",
+            "site": site,
+            "slug": slug,
+            "title": title,
+            "text": result.synopsis || ''
+          })
+        }
+        console.log(result)
+      }
+    })
+
+    if (hits.length > 0) {
+      story.push({
+        "id": wiki.itemId,
+        "type": "future",
+        "text": "Click to create this page",
+        "title": title
+      })
+      let text = ""
+      if (foundLocally == true) {
+        if (hits.length > 1) {
+          text = "We found the page on your wiki, and elsewhere in the neighborhood"
+        } else {
+          text = "We found the page on your wiki"
+        }
+      }
+      story.push({
+        "id": wiki.itemId,
+        "type": "paragraph",
+        "text": text
+      })
+      hits.forEach(element => story.push(element))
+    } else {
+      story.push({
+        "id": wiki.itemId,
+        "type": "future",
+        "text": "Click to create this page.",
+        "title": title
+      })
+    }
     return {
       "title": title,
-      "story": [
-        {
-          "id": "98234090910324",
-          "type": "future",
-          "text": "Click to create this page.",
-          "title": title
-        }
-      ],
+      "story": story,
       "journal": []
     }
   }
