@@ -6,7 +6,7 @@
  */
 var builtins;
 
-const dependencyLoaded = import('/plugins/html/DOMPurify-2.3.8/purify.min.js');
+const dependencyLoaded = import('https://cdn.jsdelivr.net/npm/dompurify@3/dist/purify.min.js');
 
 builtins = {
   'http://new_page/': params => {
