@@ -6,7 +6,7 @@
  */
 var builtins;
 
-const dependencyLoaded = import('/plugins/html/DOMPurify-2.3.8/purify.min.js');
+const dependencyLoaded = import('https://cdn.jsdelivr.net/npm/dompurify@3/dist/purify.min.js');
 
 builtins = {
   'http://new_page/': params => {
@@ -89,9 +89,9 @@ a.external::after {content:url(/images/external-link-ltr-icon.png);}
 </style>`,
     window.wiki.resolveLinks(item.text, sanitize));
   var $form, el, lastButtonData;
-  $item.dblclick(() => window.wiki.textEditor($item, item));
-  $item.find('input').dblclick(e => e.stopPropagation());
-  $item.find('svg a[data-title]').click(event => {
+  $item.on('dblclick', () => window.wiki.textEditor($item, item));
+  $item.find('input').on('dblclick', e => e.stopPropagation());
+  $item.find('svg a[data-title]').on('click', event => {
     event.preventDefault();
     event.stopPropagation();
     let anchor = event.target.closest('a[data-title]');
@@ -102,7 +102,7 @@ a.external::after {content:url(/images/external-link-ltr-icon.png);}
   el = $item.get(0);
   lastButtonData = null;
   $form = $item.find('form');
-  $form.find(':submit').click(({target:button}) => {
+  $form.find(':submit').on('click',({target:button}) => {
     if (button && button.name) {
       lastButtonData = {
         name: button.name,
