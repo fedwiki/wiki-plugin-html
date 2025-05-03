@@ -14,16 +14,15 @@
   },
   "contributors": [
     "Ward Cunningham <ward@c2.com>",
-    "Ward Cunningham <ward@newrelic.com>",
     "Paul Rodwell <paul.rodwell@btinternet.com>",
     "Eric Dobbs <eric@dobbse.net>"
   ],
   "scripts": {
+    "update-authors": "node scripts/update-authors.cjs",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {},
   "devDependencies": {
-    "grunt": "^1.5.3",
     "grunt-git-authors": "~3"
   },
   "license": "MIT",
