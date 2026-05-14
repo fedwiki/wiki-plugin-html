@@ -13,11 +13,12 @@
         const keepLineup = event.shiftKey
         document.getSelection().removeAllRanges()
 
-        const group = event.target.closest('g')
-        if (group === null) return
-        const links = group.querySelectorAll('a')
-        if (links.length != 1) return
-        const title = links[0].dataset?.title || null
+        console.log('click', event)
+
+        const title =
+          event.target.closest('a').dataset.title ||
+          event.target.closest('g').group.querySelector('a')[0].dataset?.title ||
+          null
         if (title) {
           const message = {
             action: 'doInternalLink',
