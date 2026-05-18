@@ -173,7 +173,7 @@ function bind($item, item) {
 
       event.stopPropagation()
       event.preventDefault()
-      const svg = action ? event.originalTarget.closest('.wrappedSVG').querySelector('svg').outerHTML : ''
+      const svg = action ? event.target.closest('.wrappedSVG').querySelector('svg').outerHTML : ''
       switch (action) {
         case 'download':
           const slug = $item.parents('.page').attr('id')
@@ -200,7 +200,6 @@ function bind($item, item) {
     }
 
     svgs.forEach(svg => {
-      console.log(svg)
       const wrapper = document.createElement('div')
       wrapper.classList.add('wrappedSVG')
       svg.parentNode.insertBefore(wrapper, svg)
@@ -236,7 +235,6 @@ function bind($item, item) {
 
       overlay.append(downloadAnchor, zoomAnchor)
 
-      console.log('overlay', overlay)
       svg.parentNode.insertBefore(overlay, svg)
       wrapper.addEventListener('click', svgClickHandler)
     })
